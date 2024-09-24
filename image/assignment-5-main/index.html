@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate To For Flood Relief In Bangladesh</title>
+    <link rel="shortcut icon" href="assets/icon/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        .openModal{
+            display: flex;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body class="font-primary overflow-x-hidden">
+    <!-- header -->
+    <header>
+        <div  class="fixed top-0 left-0 w-full z-50 flex justify-center backdrop-blur-[6px] bg-[#fef3e0b3]">
+            <div class="inline-flex justify-between items-center w-primary px-10 py-5">
+                <div class="hidden min-[400px]:block">
+                    <button
+                        id="headerBtn"
+                        class="bg-primary p-10 py-3 rounded-lg font-semibold text-xl transition-colors border border-primary hover:border-textPrimary hover:bg-transparent">
+                        Blog
+                    </button>
+                </div>
+                <div class="flex items-center gap-4 cursor-pointer">
+                    <img width="48px" src="assets/icon/logo.svg" alt="Logo">
+                    <span class="font-semibold text-[27px] text-textPrimary hidden xl:block">Donate Bangladesh</span>
+                </div>
+                <div>
+                    <div class="bg-offWhite p-3 px-4 rounded-lg flex items-center gap-3">
+                        <img src="assets/icon/Currency.svg" alt="Curency">
+                        <span id="wallet" class="text-xl text-textSecondary font-medium">0 BDT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tabs" class="fixed translate-y-[50%] bg-[#ffffff9a] left-0 w-full z-50 flex justify-center backdrop-blur-[6px] pt-5 min-[400px]:translate-y-[80%]">
+            <div class="inline-flex justify-center items-center w-primary px-10 py-5">
+                <div class="flex gap-5 flex-col w-full min-[400px]:w-fit min-[400px]:flex-row">
+                    <button
+                        id="donateBtn"
+                        class="bg-primary p-10 py-3 rounded-lg font-semibold text-xl transition-colors border border-primary hover:border-textPrimary hover:bg-transparent">
+                        Donate
+                    </button>
+                    <button
+                        id="historyBtn"
+                        class="bg-transparent p-10 py-3 rounded-lg font-semibold text-xl transition-colors border border-borderColor text-textSecondary hover:border-textPrimary hover:text-textPrimary">
+                        History
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header -->
+    <section id="succesModal" class="flex justify-center w-full fixed z-[9999999999999] hidden">
+        <div class="w-primary inline-flex justify-center w-screen h-screen bg-[#0000003c] items-center">
+            <div class="bg-white rounded-2xl p-7 h-fit flex flex-col gap-5 px-32 justify-center text-center modal">
+                <span class="text-4xl font-semibold text-textPrimary">Congrates!</span>
+                <img class="self-center" width="50px" src="assets/icon/Currency.svg" alt="Curency">
+                <p class="text-textSecondary text-base font-light md:text-lg">You Have Donated For Humankind</p>
+                <button id="closeModal" class="bg-offWhite transition-all py-3 w-fit border border-offWhite px-10 rounded-xl self-center font-medium hover:bg-transparent hover:border-black">close confirmation</button>
+            </div>
+        </div>
+    </section>
+    <main class="pt-[17.5rem] min-[400px]:pt-[12.5rem]">
+        <section id="donateSection" class="flex justify-center">
+            <!-- Donate 1 -->
+            <div class="inline-flex justify-center w-primary px-10 py-20 flex-col gap-10">
+                <div class="flex items-start gap-10 p-10 border border-borderColor rounded-2xl flex-col xl:flex-row">
+                    <!-- Donate Img -->
+                    <img class="rounded-2xl w-full h-auto object-cover xl:w-[533px] xl:h-[450px]" src="assets/images/d1.png" alt="Donate Image">
+                    <div class="flex flex-col gap-5">
+                        <!-- Already Donated -->
+                        <div class="bg-offWhite p-3 px-4 rounded-lg flex items-center gap-3 w-fit">
+                            <img src="assets/icon/Currency.svg" alt="Curency">
+                            <span id="dwallet" class="text-xl text-textSecondary font-medium">0 BDT</span>
+                        </div>
+                        <!-- Donate Title -->
+                        <h2 class="font-bold text-xl text-textPrimary md:text-2xl">Donate for Flood at Noakhali, Bangladesh</h2>
+                        <!-- Donate Des -->
+                        <p class="text-textSecondary text-base font-light md:text-lg">
+                            Dear Friends and Supporters,
+                            <br/>
+                            <br/>
+                            Bangladesh is currently facing a devastating flood crisis, and the district of Noakhali has been hit particularly hard. Thousands of people have lost their homes, livelihoods, and all sense of security. Families are struggling to survive, with many left homeless, in debt, and without access to basic necessities.
+                        </p>
+                        <!-- Donate Form -->
+                        <form id="donateForm" class="flex flex-col gap-5">
+                            <input id="donateFormTitle"  class="invisible hidden" value="Donate for Flood at Noakhali, Bangladesh">
+                            <input id="donateAmmount" required class="border border-borderColor outline-none px-5 py-4 rounded-xl placeholder:font-light placeholder:text-textSecondary text-textSecondary transition-all focus:ring-2 focus:ring-stone-300" type="number" placeholder="Write Donation Amount">
+                            <button class="bg-primary p-10 py-3 rounded-lg font-semibold text-xl transition-colors border border-primary hover:border-textPrimary hover:bg-transparent">Donate Now</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Donate 2 -->
+                <div class="flex items-start gap-10 p-10 border border-borderColor rounded-2xl flex-col xl:flex-row">
+                    <!-- Donate Img -->
+                    <img class="rounded-2xl w-full h-auto object-cover xl:w-[533px] xl:h-full" src="assets/images/d2.png" alt="Donate Image">
+                    <div class="flex flex-col gap-5">
+                        <!-- Already Donated -->                       
+                        <div class="bg-offWhite p-3 px-4 rounded-lg flex items-center gap-3 w-fit">
+                            <img src="assets/icon/Currency.svg" alt="Curency">
+                            <span id="dwallet" class="text-xl text-textSecondary font-medium">0 BDT</span>
+                        </div>
+                        <!-- Donate Title -->                       
+                        <h2 class="font-bold text-xl text-textPrimary md:text-2xl">Donate for Flood Relief in Feni,Bangladesh</h2>
+                        <!-- Donate Des -->                        
+                        <p class="text-textSecondary text-base font-light md:text-lg">
+                            In the wake of the recent catastrophic floods, countless lives have been turned upside down in Feni, Comilla, and surrounding areas of Noakhali. Homes have been lost, communities have been shattered, and the basic necessities that so many of us take for granted have been swept away in the rushing waters. Families who once knew stability now face an uncertain future, wondering where they will find shelter, food, and comfort in the days ahead.  
+                        </p>
+                        <!-- Donate Form -->
+                        <form id="donateForm" class="flex flex-col gap-5">
+                            <input id="donateFormTitle"  class="invisible hidden" value="Donate for Flood Relief in Feni,Bangladesh">
+                            <input id="donateAmmount" required class="border border-borderColor outline-none px-5 py-4 rounded-xl placeholder:font-light placeholder:text-textSecondary text-textSecondary transition-all focus:ring-2 focus:ring-stone-300" type="number" placeholder="Write Donation Amount">
+                            <button class="bg-primary p-10 py-3 rounded-lg font-semibold text-xl transition-colors border border-primary hover:border-textPrimary hover:bg-transparent">Donate Now</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Donate 3 -->
+                <div class="flex items-start gap-10 p-10 border border-borderColor rounded-2xl flex-col xl:flex-row">
+                    <!-- Donate Img -->
+                    <img class="rounded-2xl w-full h-auto object-cover xl:w-[533px] xl:h-full" src="assets/images/d3.png" alt="Donate Image">
+                    <div class="flex flex-col gap-5">
+                        <!-- Already Donated -->                       
+                        <div class="bg-offWhite p-3 px-4 rounded-lg flex items-center gap-3 w-fit">
+                            <img src="assets/icon/Currency.svg" alt="Curency">
+                            <span id="dwallet" class="text-xl text-textSecondary font-medium">0 BDT</span>
+                        </div>
+                        <!-- Donate Title -->                       
+                        <h2 class="font-bold text-xl text-textPrimary md:text-2xl">Aid for Injured in the Quota Movement</h2>
+                        <!-- Donate Des -->                        
+                        <p class="text-textSecondary text-base font-light md:text-lg">
+                            The Quota Reform Movement in Bangladesh, which took place in 2018, was driven by students demanding reform of the country's public sector job quota system. This system reserved 56% of government jobs for various groups, which the students found unjust, calling for merit-based recruitment.
+                            <br/>
+                            <br/>
+                            During the movement, there were instances of clashes between protestors and law enforcement, leading to injuries among students. Various organizations, human rights groups, and individuals expressed solidarity and provided support, including medical aid, to those injured.
+                        </p>
+                        <!-- Donate Form -->
+                        <form id="donateForm" class="flex flex-col gap-5">
+                            <input id="donateFormTitle"  class="invisible hidden" value="Aid for Injured in the Quota Movement">
+                            <input id="donateAmmount" required class="border border-borderColor outline-none px-5 py-4 rounded-xl placeholder:font-light placeholder:text-textSecondary text-textSecondary transition-all focus:ring-2 focus:ring-stone-300" type="number" placeholder="Write Donation Amount">
+                            <button class="bg-primary p-10 py-3 rounded-lg font-semibold text-xl transition-colors border border-primary hover:border-textPrimary hover:bg-transparent">Donate Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="historySection" class="flex justify-center pt-10 hidden">
+            <div id="historyBox" class="w-primary inline-flex justify-center px-10 gap-5 flex-col">
+                <div id="noDaonate" class="w-full flex flex-col justify-center gap-5">
+                    <img class="self-center" width="500px" src="assets/images/noDonate.svg" alt="No Donation">
+                    <h2 class="text-3xl text-textPrimary self-center text-center">No Donations Was Found</h2>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-[#F9F7F3] py-32 mt-20"></footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
